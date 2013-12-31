@@ -83,28 +83,27 @@ ProbablyEngine.rotation.register_custom(264, "Seds Resto shamy", {
 ---------------
 --Aoe healing--
 ---------------
-
---Chain heal(90% vs 3)
-{ "1064", {"@coreHealing.needsHealing(90, 3)", "!lowest.range > 30"}, "lowest" },
-
 --Healing Stream Totem
 { "5394", {"@coreHealing.needsHealing(90, 3)",}},
 
 --Healing Tide Totem
 { "108280", {"@coreHealing.needsHealing(60, 4)"}},
 
+--Chain heal(90% vs 3)
+{ "1064", {"@coreHealing.needsHealing(90, 3)", "!lowest.range > 30"}, "lowest" },
+
 --Auto res
 --{"2008", {"lowest.health = 0", "!lowest.range > 40"}, "lowest"},
 
 --Healing surge
-{ "8004", {"lowest.health < 50", "!lowest.range > 40", "!modifier.last(8004)"}, "lowest" },
+{ "8004", {"lowest.health < 25", "!lowest.range > 40", "!modifier.last(8004)"}, "lowest" },
 
 --Greater Healing Wave
-{ "77472", {"lowest.health < 60", "player.buff(53390)",  "!lowest.range > 40", "!modifier.last(77472)"}, "lowest" },
+{ "77472", {"lowest.health < 50", "player.buff(53390)",  "!lowest.range > 40", "!modifier.last(77472)"}, "lowest" },
 
 --Healing Wave
-{"331", {"tank.health < 90", "player.buff(53390)", "!lowest.range > 40", "!modifier.last(331)"}, "lowest" },
-{"331", {"lowest.health < 85", "player.buff(53390)", "lowest.range > 40", "!modifier.last(331)"}, "lowest" },
+{"331", {"tank.health < 80", "player.buff(53390)", "!lowest.range > 40", "!modifier.last(331)"}, "lowest" },
+{"331", {"lowest.health < 70", "player.buff(53390)", "lowest.range > 40", "!modifier.last(331)"}, "lowest" },
 
 --Riptide
 { "61295", {"!lowest.buff(Riptide)", "lowest.spell(Riptide).range", "lowest.health < 80"}, "lowest"},
@@ -119,7 +118,7 @@ ProbablyEngine.rotation.register_custom(264, "Seds Resto shamy", {
 { "61295", {"!tank.buff(Riptide)", "tank.buff(Riptide).duration < 2", "!tank.range > 40"}, "tank" },
 
 --Tank surge
-{"8004", {"tank.health <= 40", "lowest.range", "!modifier.last(8004)"}, "lowest" },
+{"8004", {"tank.health <= 35", "lowest.range", "!modifier.last(8004)"}, "lowest" },
 
 --------
 --Mana--
