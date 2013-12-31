@@ -97,7 +97,7 @@ ProbablyEngine.rotation.register_custom(264, "Seds Resto shamy", {
 --{"2008", {"lowest.health = 0", "!lowest.range > 40"}, "lowest"},
 
 --Healing surge
-{ "8004", {"lowest.health < 50", "!lowest.range > 40", "!modifier.last(8004)"}, "lowest" },
+{ "8004", {"lowest.health < 35", "!lowest.range > 40", "!modifier.last(8004)"}, "lowest" },
 
 --Greater Healing Wave
 { "77472", {"lowest.health < 60", "player.buff(53390)",  "!lowest.range > 40", "!modifier.last(77472)"}, "lowest" },
